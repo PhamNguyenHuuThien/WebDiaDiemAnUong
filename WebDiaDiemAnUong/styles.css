@@ -1,0 +1,363 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 25px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	/*cursor: url("https://tuoitreit.vn/images/tuoitreit.cur"), progress;*/
+	cursor:url("http://huuthien.byethost8.com/clovel.cur"),progress; 
+}
+a:hover{
+	text-decoration: none;
+	cursor : url("http://huuthien.byethost8.com/clovel.cur"), progress;
+	transition: all 0.1s;
+	font-weight: bold;
+}
+.wrapper{
+	width: 1200px;
+	height: auto;
+	border: 1px solid #000000;
+	margin: auto; 
+}
+.top-header{
+	/*height: 0px;*/
+	/*border: 1px solid #FF4D50;
+	background: #FF7E80;*/
+}
+.header{
+	
+	height: auto;
+	border: 1px solid #FF8A8C;
+}
+.content-left{
+	width: 750px;
+	height: auto;
+	/*border-right: 1px solid #000000;*/
+	border: 1px solid #00FFFB;
+	/*background: #00FF4C;*/
+	float: left;
+}
+.content-right{
+	width: 445px;
+	height: auto;
+	/*border-left: 1px solid #000000;*/
+	border: 1px solid #FF0000;
+	float: right;
+}
+.footer{
+	height: auto;
+	text-align: center;
+	border: 1px solid;
+	padding: 25px;
+	background: #1F568B;
+	color: white;
+}
+.footer a{
+	color: white;
+}
+.clear{
+	clear: both;
+}
+
+.g_title {
+	border: #FFFFFF;
+    border-top: solid 1px #d9d9d9;
+    display: inline-block;
+    width: 100%;
+}
+
+#menu{
+	font-size: 22px;
+	/*border-right: 5px solid #0E00FF;*/
+	padding: 0px;
+	width: 100%;
+	margin-top: -6px;
+	/*position: fixed;
+	z-index: 9999;*/
+}
+/*==Style cho menu===*/
+
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+	
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+	
+/*display: inline;*/
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  	background: #F1F1F1;
+  	color: #333;
+	transition: all 0.5s;
+	font-weight: bold;
+}
+table{
+	width: 700px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-top: 15px;
+	vertical-align: bottom;
+	font-size: 30px;
+}
+.tieude{
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #FF6300;
+	margin: 50px 50px 50px 50px;
+	background: #1F568B;
+	text-shadow: ;
+	border-radius: 3px;
+	color: white;
+	padding: 5px;
+}
+
+.topdiadiem{
+	margin-left: 25px;
+	font-size: 25px;
+	list-style-type: none;
+	margin-right: 49px;
+}
+.topdiadiem a:hover{
+	font-size: 30px;
+	transition: all 0.5s;
+	font-weight: bold;
+	background: none;
+}
+
+
+#more{
+	text-align: center;
+	font-size: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 40px;
+	font-style: italic;
+}
+#more a{
+	text-decoration: none;
+}
+#more a:hover{
+	text-decoration: none; background: url("http://huuthien.byethost8.com/linkbackground.gif");
+	background-position: bottom bottom; 
+}
+.hello{
+	padding: 5px;
+	text-align: center;
+}
+
+.btn-top {
+    background-image: url(/btn_top.png);
+    background-repeat: no-repeat;
+    border: medium none;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    outline: medium none;
+    padding: 0;
+    position: fixed;
+    right: 20px;
+    width: 50px;
+    z-index: 9999;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+.search{
+	font-size: 25px;
+	margin-left: 50px;
+	text-align: center;
+	padding: 20px;
+}
+
+/*Slideshow*/
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .slprev, .slnext,.text {font-size: 11px}
+         }
+       
+
+
+/*Tim*/
+.fa-heart{
+	color: #d00;
+	animation: animate 1s infinite linear;
+}
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0); -ms-transform: scale(0);transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1); -ms-transform: scale(1);transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0); -ms-transform: scale(0);transform: scale(0);
+  }
+}
+
+a:visited { 
+    color: black;
+}
+
+/*form*/
+.form{
+	width: 750px;
+	height: auto;
+	/*background: #00FF4C;*/
+	float: left;
+	text-align:center;
+}
+#required{
+	color: red;
+
+}
+
+#button{
+	width:194px;
+	height:50px;
+	font-size:30px;
+	border-radius: 20px;
+}
+
+.img {
+    text-align: center;
+}
+
+/*Item trang chu*/
+.item {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    margin-left:6px;
+}
+.item-image{
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+.image-size{
+	width: 150px;
+	height: 150px;
+}
+.item-name{
+	width: 200px;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+.item-name a{
+	text-decoration: none;
+	color: #000000;
+}
+
+
+
+

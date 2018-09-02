@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebDiaDiemAnUong.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title><asp:ContentPlaceHolder ID="Tieude" runat="server">
+
+        </asp:ContentPlaceHolder> - Địa điểm Ăn Uống</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="/styles.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("script ~ div").css('display', 'none');
+        $("center a").css('display', 'none');
+    });
+</script>
+<script src="/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/javascript.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+
+        </asp:ContentPlaceHolder>
+</head>
+
+<body onload="chao();red();" >
+    <form id="form1" runat="server">
+<div class="wrapper">
+<div class="top-header">
+	
+	</div>
+	<div class="header"><img src="/logo.jpg" width=1200px height="400px"></div>
+	<div id="menu">
+	  <ul>
+		<li><a href="/Default.aspx"><img src="http://i978.photobucket.com/albums/ae269/thanhtamboot/xtgem/icon%20wap/rn_090803_143230.gif" border="0" >Trang chủ</a></li>
+		<li><a href="/DiaDiem/Default.aspx">Địa điểm</a></li>
+		<li><a href="/TinTuc/Default.aspx">Tin tức</a></li>
+		<li><a href="/HinhAnh/Default.aspx">Hình ảnh</a></li>
+		<li><a href="/Video/Default.aspx">Video</a></li>
+		<li><a href="/Review/Default.aspx">Review</a></li>
+		<li><a href="/LienHe/Default.aspx">Liên hệ</a></li>
+        <li><a href="/DangNhap/Default.aspx">Đăng nhập</a></li>
+	  </ul>
+	
+	</div>
+	<div class="content-left">
+        <br>
+	    <asp:ContentPlaceHolder ID="Content" runat="server">
+
+        </asp:ContentPlaceHolder>
+	<br>
+       </div>
+	<div class="content-right">
+        <center>
+        <%=Ten %></center>
+
+	<div class="hello">
+		<img src="http://i978.photobucket.com/albums/ae269/thanhtamboot/xtgem/icon%20wap/Schedule.gif" border="0" >
+		
+		
+		<div id="clockDiv"></div><hr>
+
+		<font color='ff4400'><div id="LoiChao"></div></font>
+		
+		
+	</div>	
+	<div id="search" >
+	<p class="tieude" style="margin: 0px auto;text-align: center"><i class="fas fa-search"></i> Tìm trong trang</p>
+		<input type="hidden" name="sitesearch" value="http://huuthien.byethost8.com/">
+		<input id="inputtim" type="text" name="q" placeholder="Nhập từ khoá" size="50">
+		<input type="submit" value="Tìm" onclick="timkiem()">
+		</div>
+	
+		<hr>
+		<p class="tieude" style="margin: 0px auto;text-align: center"><img src="http://i978.photobucket.com/albums/ae269/thanhtamboot/xtgem/icon%20wap/Mediumrating.gif" border="0">Top địa điểm</p>
+		<br>
+		<div class="topdiadiem">
+		<ol style="list-style-type: none;">
+			<li><a href="/DiaDiem/bonuong.aspx"><span style="color:red;font-weight: bold">01</span> Bò nướng Mỡ chày </a><hr></li>
+			<li><a href="/DiaDiem/cafegiovanuoc.aspx"><span style="color:green;font-weight: bold">02 </span>Cà phê Gió và Nước</a><hr></li>
+			<li><a href="/DiaDiem/BanhMiHeoQuay.aspx"><span style="color:blue;font-weight: bold">03 </span>Bánh Mì Heo Quay</a><hr></li>
+			<li><a href="/DiaDiem/ngoctrongda.aspx"><span style="font-weight: bold">04 </span>Bingsu mát lành</a><hr></li>
+			<li><a href="/DiaDiem/banhbeochen.aspx"><span style="font-weight: bold">05 </span>Bánh bèo chén</a><hr></li>
+			<li><a href="/DiaDiem/mibaho.aspx"><span style="font-weight: bold">06 </span>Mì Bà Hơ</a><hr></li>
+			<li><a href="/DiaDiem/Comtamdem.aspx"><span style="font-weight: bold">07 </span>Cơm tấm đêm 777</a><hr></li>
+			<li><a href="/DiaDiem/kfc.aspx"><span style="font-weight: bold">08 </span>KFC - Lotte Mart </a><hr></li>
+			<li><a href="/DiaDiem/boss.aspx"><span style="font-weight: bold">09 </span>Boss Coffee</a><hr></li>
+			<li><a href="/DiaDiem/ngoctrongda.aspx"><span style="font-weight: bold">10 </span>Ngọc Trong Đá Coffee</a><hr></li>
+		</ol>
+		</div>
+		<p id="more"><a href="DiaDiem/Default.aspx">Xem thêm</a></p>
+		<hr>
+		<p class="tieude" style="margin: 0px auto;text-align: center"><img src="http://i978.photobucket.com/albums/ae269/thanhtamboot/xtgem/icon%20wap/Notes.gif" border="0" >Thông tin sức khoẻ</p>
+		<br>
+		<ul style="margin-left: 50px;font-size: 25px;">
+			<li><a href="/TinTuc/daucovai.aspx" >Người hay dùng điện thoại, máy tính thường bị đau cổ đau vai hãy xem bài viết này</a> </li>
+			<li><a href="/TinTuc/khieuvu.aspx"  >Khiêu vũ giúp bạn tránh trầm cảm</a> </li>
+			<li><a href="/TinTuc/ngodoc.aspx"  >Trời lạnh coi chừng ngộ độc khí CO khi sưởi ấm bằng than</a> </li>
+			<li><a href="/TinTuc/andudu.aspx"  >Lý do nên ăn đu đủ mỗi ngày</a> </li>
+			
+		</ul>
+		<br>
+		<hr>
+		<p id="more"><a href="/TinTuc/Default.aspx">Xem thêm</a></p>
+		<hr>
+		
+		
+		
+	</div>
+	<div class="clear"></div>
+
+	<div class="footer">
+	  <p><em>©2018. Designed with all the <i class="fa fa-heart" aria-hidden="true"></i>  in the world by PNHT.</em></p>
+		<p><a href="http://facebook.com/thienisthelegend"><i class="fab fa-facebook"></i></a><em> SĐT: <a href="tel://01646714040">0164 671 4040</a></em> <em>- Email: 
+      <a href="mailto:bibi9768@gmail.com" style="text-decoration: none" ;="">bibi9768@gmail.com</a></em></p>
+		<p></p>
+	  <p><em>Địa chỉ: 1011/4 Lê Hồng Phong, P. Phú Thọ, TP.TDM, Bình Dương</em></p>
+		  <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"></a></p>
+	</div>
+	</div>
+    </form>
+</body>
+</html>
